@@ -1,0 +1,19 @@
+<nav class="row jcenter xfill">
+	<a href="/">
+		<img class="yfill" src="/logo.svg" alt="Logo" />
+	</a>
+</nav>
+
+<style lang="scss">
+	nav {
+		position: fixed;
+		inset: 0 0 auto 0;
+		border-top: 10px solid $pri;
+
+		a {
+			background: $pri;
+			padding: 20px 40px;
+			border-radius: 0 0 16px 16px;
+		}
+	}
+</style>
