@@ -9,6 +9,7 @@
 		position: fixed;
 		inset: 0 0 auto 0;
 		border-top: 10px solid $pri;
+		z-index: 9;
 
 		a {
 			background: $pri;
