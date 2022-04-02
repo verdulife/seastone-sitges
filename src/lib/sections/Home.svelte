@@ -1,8 +1,7 @@
 <section class="col fcenter xfill">
+	<img class="bg xfill" src="/bg.png" alt="Seastone Sitges" />
 	<h1>Descubre el nuevo complejo de 11 viviendas adosados en <strong>Sitges</strong></h1>
 	<button class="sec">MÁS INFORMACIÓN</button>
-
-	<img class="bg xfill" src="/bg.png" alt="Seastone Sitges" />
 </section>
 
 <style lang="scss">
@@ -11,8 +10,11 @@
 
 		.bg {
 			position: absolute;
-			top: -15%;
+			top: 0;
 			left: 0;
+			max-height: 100vh;
+			object-fit: cover;
+			object-position: bottom center;
 		}
 
 		*:not(.bg) {

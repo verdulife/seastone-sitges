@@ -1,11 +1,3 @@
-<script context="module">
-	export async function load({ url }) {
-		return {
-			props: { url }
-		};
-	}
-</script>
-
 <script lang="ts">
 	import '../fonts/darkergrotesque.css';
 	import 'verdu/fonts/operator.css';

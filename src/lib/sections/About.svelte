@@ -28,8 +28,6 @@
 	p {
 		max-width: 800px;
 		text-align: center;
-		line-height: 1.1;
-		font-size: 24px;
 		margin-top: 40px;
 	}
 </style>
