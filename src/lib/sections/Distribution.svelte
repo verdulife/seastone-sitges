@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let flats = [
 		{
 			value: 'sotano',
@@ -12,10 +12,13 @@
 		},
 		{
 			value: 'superiores',
-			label: 'Primera y segunda planta',
+			label: '1ª y 2ª Planta',
 			image: '/plantas-superiores.png'
 		}
 	];
+
+	let selectedIndex = 0;
+	$: selected = flats[selectedIndex];
 </script>
 
 <section class="col acenter xfill">
@@ -23,15 +26,23 @@
 
 	<div class="tabs-container row jcenter xfill">
 		<ul class="tabs col fcenter yfill">
-			<li class="xfill active">Sótano</li>
-			<li class="xfill">Planta Baja</li>
-			<li class="xfill">1ª y 2ª Planta</li>
+			{#each flats as flat, i}
+				<li
+					class="xfill"
+					class:active={flat.value === selected.value}
+					on:mouseenter={() => (selectedIndex = i)}
+				>
+					{flat.label}
+				</li>
+			{/each}
 		</ul>
 
 		<div class="image row grow yfill">
-			<img class="fill" src="/sotano.png" alt="Sótano" />
+			<img class="fill" src={selected.image} alt={selected.label} />
 		</div>
 	</div>
+
+	<img class="ce" src="/ce.png" alt="Calificación Energética" />
 </section>
 
 <style lang="scss">
@@ -39,7 +50,6 @@
 		max-width: 1400px;
 		margin: 0 auto;
 		margin-top: 100px;
-		padding-bottom: 100px;
 
 		h2 {
 			text-align: center;
@@ -66,7 +76,7 @@
 
 			li {
 				cursor: pointer;
-        position: relative;
+				position: relative;
 				color: $white;
 				text-align: center;
 				font-size: 24px;
@@ -79,6 +89,10 @@
 				&:hover {
 					color: $sec;
 				}
+
+				&:after {
+					transition: 200ms;
+				}
 			}
 
 			.active {
@@ -89,13 +103,13 @@
 				&:after {
 					content: '';
 					position: absolute;
-          bottom: 50%;
-          right: -41px;
-          display: flex;
+					bottom: 50%;
+					right: -41px;
+					display: flex;
 					width: 40px;
 					height: 1px;
 					background: $border;
-          z-index: 2;
+					z-index: 2;
 				}
 			}
 		}
@@ -108,5 +122,9 @@
 				object-position: center;
 			}
 		}
+	}
+
+	.ce {
+		margin-top: 60px;
 	}
 </style>
