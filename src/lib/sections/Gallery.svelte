@@ -52,6 +52,10 @@
 <style lang="scss">
 	section {
 		margin-top: 200px;
+
+		@media (max-width: $tablet) {
+			margin-top: 100px;
+		}
 	}
 
 	h2 {
@@ -60,6 +64,11 @@
 		line-height: 1;
 		color: $pri;
 		z-index: 2;
+
+		@media (max-width: $tablet) {
+			font-size: 40px;
+			margin-bottom: 20px;
+		}
 	}
 
 	.wrapper {
@@ -67,8 +76,9 @@
 		background: $pri;
 
 		.wave {
+			width: calc(100% + 2px);
 			position: absolute;
-			left: 0;
+			left: -1px;
 			z-index: 1;
 		}
 
@@ -79,7 +89,7 @@
 		}
 
 		.wave-bot {
-			bottom: 0;
+			bottom: -1px;
 			transform: rotateY(180deg);
 			filter: drop-shadow(0px -20px 10px rgba(0, 0, 0, 0.3));
 		}
@@ -87,10 +97,16 @@
 		.slider {
 			height: 105vh;
 			scroll-behavior: smooth;
+			scroll-snap-type: x mandatory;
+
+			@media (max-width: $tablet) {
+				height: 50vh;
+			}
 		}
 
 		.slide {
 			width: 100vw;
+			scroll-snap-align: center;
 
 			img {
 				object-fit: cover;
@@ -110,6 +126,15 @@
 			padding: 50px 45px;
 			z-index: 2;
 
+			@media (max-width: $tablet) {
+				width: 50px;
+				height: 70px;
+				padding: 25px 15px;
+				background: transparent;
+				backdrop-filter: none;
+				filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+			}
+
 			img {
 				transition: 200ms;
 			}
@@ -117,6 +142,10 @@
 			&:hover {
 				img {
 					transform: scale(1.2);
+
+					@media (max-width: $tablet) {
+						transform: none;
+					}
 				}
 			}
 		}

@@ -88,7 +88,6 @@
 	section {
 		background: $pri;
 		margin: 0 auto;
-		padding: 0 calc((100% - 1400px) / 2);
 	}
 
 	header {
@@ -96,9 +95,17 @@
 		text-align: center;
 		color: $white;
 
+		@media (max-width: $tablet) {
+			padding: 60px 20px;
+		}
+
 		h2 {
 			line-height: 1;
 			font-size: 60px;
+
+			@media (max-width: $tablet) {
+				font-size: 40px;
+			}
 		}
 
 		p {
@@ -108,26 +115,54 @@
 	}
 
 	.title {
+		max-width: 1400px;
 		margin-top: 100px;
+		padding: 0 60px;
+
+		@media (max-width: $tablet) {
+			padding: 0 20px;
+		}
 
 		.content {
 			height: 500px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				height: auto;
+				align-items: center;
+			}
 
 			h2 {
 				color: $white;
 				font-size: 80px;
 				line-height: 1;
+
+				@media (max-width: $tablet) {
+					font-size: 60px;
+					text-align: center;
+				}
 			}
 
 			p {
 				max-width: 500px;
 				color: $white;
 				margin-top: 40px;
+
+				@media (max-width: $tablet) {
+					text-align: center;
+					margin-top: 20px;
+				}
 			}
 		}
 
 		.image {
 			height: 500px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				height: auto;
+				margin-top: 40px;
+			}
 
 			img {
 				object-fit: cover;
@@ -139,6 +174,12 @@
 	h3 {
 		color: $sec;
 		font-size: 40px;
+		line-height: 1;
+		margin-bottom: 10px;
+
+		@media (max-width: $tablet) {
+			font-size: 30px;
+		}
 	}
 
 	p {
@@ -149,16 +190,31 @@
 	.description {
 		margin-top: 100px;
 
+		@media (max-width: $tablet) {
+			margin-top: 0px;
+		}
+
 		li {
 			width: 50%;
-			min-width: 300px;
+			max-width: 600px;
 			text-align: center;
 			padding: 60px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				padding: 20px;
+			}
 		}
 	}
 
   footer {
     margin-top: 100px;
     text-align: center;
+		padding: 0 60px;
+
+		@media (max-width: $tablet) {
+			padding: 60px 20px;
+			margin-top: 0px;
+		}
   }
 </style>

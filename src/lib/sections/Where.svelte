@@ -40,27 +40,52 @@
 		max-width: 1400px;
 		margin: 0 auto;
 		padding: 0 60px;
+
+		@media (max-width: $tablet) {
+			padding: 0 20px;
+		}
 	}
 
 	.title {
 		.content {
 			height: 600px;
 
+			@media (max-width: $tablet) {
+				width: 100%;
+				height: auto;
+				align-items: center;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
 			h2 {
 				strong {
 					font-size: 40px;
 					color: $sec;
+
+					@media (max-width: $tablet) {
+						font-size: 30px;
+					}
 				}
 
 				max-width: 800px;
 				line-height: 1;
 				font-size: 80px;
 				color: $pri;
+
+				@media (max-width: $tablet) {
+					font-size: 50px;
+				}
 			}
 		}
 
 		.image {
 			height: 600px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				height: auto;
+			}
 
 			img {
 				object-fit: cover;
@@ -72,9 +97,18 @@
 	.description {
 		margin-top: 100px;
 
+		@media (max-width: $tablet) {
+			margin-top: 40px;
+		}
+
 		p {
 			column-count: 2;
 			column-gap: 60px;
+
+			@media (max-width: $tablet) {
+				column-count: 1;
+				text-align: center;
+			}
 		}
 	}
 </style>

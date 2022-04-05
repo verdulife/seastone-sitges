@@ -50,12 +50,17 @@
 		max-width: 1400px;
 		margin: 0 auto;
 		margin-top: 100px;
+		padding: 0 20px;
 
 		h2 {
 			text-align: center;
 			font-size: 60px;
 			line-height: 1;
 			color: $pri;
+
+			@media (max-width: $tablet) {
+				font-size: 40px;
+			}
 		}
 	}
 
@@ -68,11 +73,23 @@
 		overflow: hidden;
 		margin-top: 40px;
 
+		@media (max-width: $tablet) {
+			width: 100%;
+			height: auto;
+			flex-direction: column-reverse;
+		}
+
 		.tabs {
 			width: 300px;
 			gap: 30px;
 			background: $pri;
 			padding: 40px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				gap: 0;
+				padding: 20px;
+			}
 
 			li {
 				cursor: pointer;
@@ -85,6 +102,11 @@
 				border-radius: 16px;
 				padding: 10px 20px;
 				transition: 200ms;
+
+				@media (max-width: $tablet) {
+					font-size: 18px;
+					padding: 10px;
+				}
 
 				&:hover {
 					color: $sec;
@@ -110,12 +132,21 @@
 					height: 1px;
 					background: $border;
 					z-index: 2;
+
+					@media (max-width: $tablet) {
+						display: none;
+					}
 				}
 			}
 		}
 
 		.image {
 			padding: 40px;
+
+			@media (max-width: $tablet) {
+				width: 100%;
+				height: calc(100vw - 80px);
+			}
 
 			img {
 				object-fit: contain;
@@ -125,6 +156,11 @@
 	}
 
 	.ce {
+		width: 350px;
 		margin-top: 60px;
+
+		@media (max-width: $tablet) {
+			width: 90%;
+		}
 	}
 </style>

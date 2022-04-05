@@ -1,4 +1,4 @@
-<section class="col fcenter xfill">
+<section id="about" class="col fcenter xfill">
 	<h2>¿Quién somos?</h2>
 
 	<p>
@@ -13,8 +13,11 @@
 
 <style lang="scss">
 	section {
-		padding: 0 60px;
-		padding-bottom: 200px;
+		padding: 200px 60px;
+
+		@media (max-width: $tablet) {
+			padding: 100px 20px;
+		}
 	}
 
 	h2 {
@@ -23,6 +26,10 @@
 		line-height: 1;
 		font-size: 60px;
 		color: $pri;
+
+		@media (max-width: $tablet) {
+			font-size: 40px;
+		}
 	}
 
 	p {

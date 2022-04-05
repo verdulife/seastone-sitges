@@ -24,4 +24,8 @@
 	main {
 		background: $white;
 	}
+
+	.scroll {
+		scroll-behavior: smooth;
+	}
 </style>
