@@ -76,9 +76,8 @@
 		background: $pri;
 
 		.wave {
-			width: calc(100% + 2px);
 			position: absolute;
-			left: -1px;
+			left: 0;
 			z-index: 1;
 		}
 
@@ -89,7 +88,7 @@
 		}
 
 		.wave-bot {
-			bottom: -1px;
+			bottom: 0;
 			transform: rotateY(180deg);
 			filter: drop-shadow(0px -20px 10px rgba(0, 0, 0, 0.3));
 		}

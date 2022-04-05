@@ -31,6 +31,7 @@
 					class="xfill"
 					class:active={flat.value === selected.value}
 					on:mouseenter={() => (selectedIndex = i)}
+					on:click={() => (selectedIndex = i)}
 				>
 					{flat.label}
 				</li>
