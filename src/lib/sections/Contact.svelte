@@ -11,7 +11,7 @@
 		title="Carrer Salvador Robert i Raventos 2, Sitges"
 	/>
 
-	<h2>Contacta</h2>
+	<h2 class="desk-title">Contacta</h2>
 
 	<div class="contact row jcenter xfill">
 		<div class="info col acenter xhalf">
@@ -30,6 +30,8 @@
 				Se atiende con cita previa
 			</p>
 		</div>
+
+		<h2 class="mob-title">Contacta</h2>
 
 		<form class="col xhalf" on:submit|preventDefault={sendForm}>
 			<div class="input-wrapper col xfill">
@@ -77,6 +79,21 @@
 
 		@media (max-width: $tablet) {
 			font-size: 40px;
+		}
+	}
+	
+
+	.mob-title {
+		display: none;
+	}
+
+	@media (max-width: $tablet) {
+		.desk-title {
+			display: none;
+		}
+
+		.mob-title {
+			display: inherit;
 		}
 	}
 

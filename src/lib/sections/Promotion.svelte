@@ -3,7 +3,7 @@
 
 	<section class="col acenter xfill">
 		<header>
-			<h2>La Promioción</h2>
+			<h2>La Promoción</h2>
 
 			<p>
 				Seastone Sitges una promoción en un enclave privilegiado pensada para disfrutar el día a día
