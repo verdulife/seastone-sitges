@@ -1,6 +1,6 @@
 <section class="col fcenter xfill">
 	<img class="bg xfill" src="/bg.png" alt="Seastone Sitges" />
-	<h1>Descubre el nuevo complejo de 11 viviendas adosados en <strong>Sitges</strong></h1>
+	<h1>Descubre el nuevo complejo de 11 viviendas adosadas en <strong>Sitges</strong></h1>
 	<a class="btn sec" href="#about">MÁS INFORMACIÓN</a>
 </section>
 

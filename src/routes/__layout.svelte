@@ -6,6 +6,10 @@
 
 <svelte:head>
 	<title>Seastone Homes | Sitges</title>
+	<meta
+		name="description"
+		content="Seastone Sitges es una promoción de 11 viviendas adosadas, con ventanales que maximizan la luz natural, y proyectadas para garantizar una distribución óptima"
+	/>
 </svelte:head>
 
 <main>
