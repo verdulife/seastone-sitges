@@ -1,5 +1,33 @@
 <script lang="ts">
-	function sendForm() {}
+	let btn_text = 'ENVIAR';
+	async function sendForm(e) {
+		btn_text = 'ENVIANDO...';
+
+		const data = Object.fromEntries(new FormData(e.target));
+		const req = await fetch('/form', {
+			method: 'POST',
+			body: JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+
+		const res = await req.json();
+
+		if (res.status === 'error') {
+			alert('Error al enviar el mensaje. Por favor, espere un momento y vuelva a intentarlo.');
+			return;
+		}
+
+		setTimeout(() => {
+			btn_text = 'ENVIADO ✔';
+			e.target.reset();
+
+			setTimeout(() => {
+				btn_text = 'ENVIAR';
+			}, 2000);
+		}, 2000);
+	}
 </script>
 
 <section class="col acenter">
@@ -33,7 +61,7 @@
 
 		<h2 class="mob-title">Contacta</h2>
 
-		<form class="col xhalf" on:submit|preventDefault={sendForm}>
+		<form class="col xhalf" on:submit|preventDefault={(e) => sendForm(e)}>
 			<div class="input-wrapper col xfill">
 				<label for="name">Nombre</label>
 				<input type="text" id="name" name="name" required />
@@ -54,7 +82,7 @@
 				<textarea type="message" id="message" name="message" required />
 			</div>
 
-			<button class="sec">ENVIAR</button>
+			<button class="sec">{btn_text}</button>
 		</form>
 	</div>
 </section>
@@ -81,7 +109,6 @@
 			font-size: 40px;
 		}
 	}
-	
 
 	.mob-title {
 		display: none;
@@ -167,12 +194,14 @@
 			font-size: 14px;
 			font-weight: bold;
 			color: $grey;
-			padding: 15px;
+			padding: 0 15px;
 		}
 
 		input,
 		textarea {
 			width: 100%;
+			color: $white;
+			font-size: 20px;
 			border-bottom: 1px solid darken($pri, 5%);
 			margin-bottom: 20px;
 
