@@ -41,7 +41,7 @@
 
 	<h2 class="desk-title">Contacta</h2>
 
-	<div class="contact row jcenter xfill">
+	<div id="contact" class="contact row jcenter xfill">
 		<div class="info col acenter xhalf">
 			<h3>Comercializa</h3>
 			<img src="/swan-logo.svg" alt="Swan Property Services" />
@@ -110,16 +110,17 @@
 		}
 	}
 
-	.mob-title {
-		display: none;
-	}
-
-	@media (max-width: $tablet) {
-		.desk-title {
+	.desk-title {
+		@media (max-width: $tablet) {
 			display: none;
 		}
+	}
 
-		.mob-title {
+	.mob-title {
+		display: none;
+		margin-top: 60px;
+
+		@media (max-width: $tablet) {
 			display: inherit;
 		}
 	}
@@ -141,10 +142,8 @@
 	.contact {
 		max-width: 1200px;
 		color: $white;
-		margin-top: 40px;
 
 		@media (max-width: $tablet) {
-			margin-top: 0;
 		}
 	}
 

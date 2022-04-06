@@ -90,6 +90,10 @@
 		margin: 0 auto;
 	}
 
+	.wave-top {
+		margin-bottom: -3px;
+	}
+
 	header {
 		padding: 0 60px;
 		text-align: center;
@@ -217,4 +221,8 @@
 			margin-top: 0px;
 		}
   }
+
+	.wave-bot {
+		margin-top: -3px;
+	}
 </style>

@@ -1,4 +1,4 @@
-<section id="about" class="col fcenter xfill">
+<section class="col fcenter xfill">
 	<h2>¿Quién somos?</h2>
 
 	<p>

@@ -82,13 +82,13 @@
 		}
 
 		.wave-top {
-			top: 0;
+			top: -3px;
 			transform: rotateY(180deg);
 			filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
 		}
 
 		.wave-bot {
-			bottom: 0;
+			bottom: -3px;
 			transform: rotateY(180deg);
 			filter: drop-shadow(0px -20px 10px rgba(0, 0, 0, 0.3));
 		}
