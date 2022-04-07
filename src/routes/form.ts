@@ -1,7 +1,7 @@
 import { SMTPClient } from 'emailjs';
 
 //const emailTo = 'sitges@seastone.es';
-const emailTo = 'verdukactus@gmail.com';
+const emailTo = 'verdu@live.com';
 
 export async function post({ request }) {
 	const { name, email, phone, message } = await request.json();

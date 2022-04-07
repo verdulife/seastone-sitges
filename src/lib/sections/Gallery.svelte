@@ -1,7 +1,7 @@
 <script lang="ts">
 	let images = [];
 
-	for (let i = 0; i < 18; i++) {
+	for (let i = 0; i < 13; i++) {
 		images = [...images, `/gallery/${i + 1}.jpg`];
 	}
 
