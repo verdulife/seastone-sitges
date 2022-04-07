@@ -26,10 +26,12 @@ Teléfono: ${phone}
   ${message}
 `
 		},
-		() => {
+		(err, message) => {
 			return {
 				body: {
-					status: 'error'
+					status: 'error',
+					err,
+					message
 				}
 			};
 		}

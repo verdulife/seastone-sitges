@@ -1,9 +1,10 @@
 <script lang="ts">
 	let btn_text = 'ENVIAR';
-	async function sendForm(e) {
+	async function sendForm(e: Event) {
 		btn_text = 'ENVIANDO...';
+		let form = e.target as HTMLFormElement;
 
-		const data = Object.fromEntries(new FormData(e.target));
+		const data = Object.fromEntries(new FormData(form) as any);
 		const req = await fetch('/form', {
 			method: 'POST',
 			body: JSON.stringify(data),
@@ -14,6 +15,8 @@
 
 		const res = await req.json();
 
+		console.log(res);
+
 		if (res.status === 'error') {
 			alert('Error al enviar el mensaje. Por favor, espere un momento y vuelva a intentarlo.');
 			return;
@@ -21,7 +24,7 @@
 
 		setTimeout(() => {
 			btn_text = 'ENVIADO ✔';
-			e.target.reset();
+			form.reset();
 
 			setTimeout(() => {
 				btn_text = 'ENVIAR';
