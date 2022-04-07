@@ -1,7 +1,7 @@
 import { SMTPClient } from 'emailjs';
 
 //const emailTo = 'sitges@seastone.es';
-const emailTo = 'verdu@live.com';
+const emailTo = 'verdukactus@gmail.com';
 
 export async function post({ request }) {
 	const { name, email, phone, message } = await request.json();
@@ -13,8 +13,8 @@ export async function post({ request }) {
 		ssl: true
 	});
 
-	client.send(
-		{
+	try {
+		await client.sendAsync({
 			from: `Seastone Homes Sitges Web <${import.meta.env.VITE_EMAIL_USER}>`,
 			to: `Seastone Homes Sitges <${emailTo}>`,
 			subject: name,
@@ -25,21 +25,21 @@ Teléfono: ${phone}
 \n
   ${message}
 `
-		},
-		(err, message) => {
-			return {
-				body: {
-					status: 'error',
-					err,
-					message
-				}
-			};
-		}
-	);
+		});
 
-	return {
-		body: {
-			status: 'ok'
-		}
-	};
+		return {
+			body: {
+				status: 'ok',
+				from: `Seastone Homes Sitges Web <${import.meta.env.VITE_EMAIL_USER}>`,
+				to: `Seastone Homes Sitges <${emailTo}>`
+			}
+		};
+	} catch (err) {
+		return {
+			body: {
+				status: 'error',
+				err
+			}
+		};
+	}
 }
