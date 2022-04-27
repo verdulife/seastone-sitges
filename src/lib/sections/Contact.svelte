@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	let btn_text = 'ENVIAR';
 	async function sendForm(e: Event) {
 		btn_text = 'ENVIANDO...';
@@ -31,7 +31,7 @@
 			}, 2000);
 		}, 2000);
 	}
-</script>
+</script> -->
 
 <section class="col acenter">
 	<h2>Encuéntranos en</h2>
@@ -62,7 +62,7 @@
 			</p>
 		</div>
 
-		<h2 class="mob-title">Contacta</h2>
+		<!-- <h2 class="mob-title">Contacta</h2>
 
 		<form class="col xhalf" on:submit|preventDefault={(e) => sendForm(e)}>
 			<div class="input-wrapper col xfill">
@@ -86,7 +86,7 @@
 			</div>
 
 			<button class="sec">{btn_text}</button>
-		</form>
+		</form> -->
 	</div>
 </section>
 
@@ -181,7 +181,7 @@
 		}
 	}
 
-	form {
+	/* form {
 		border-left: 1px solid darken($pri, 5%);
 		padding: 40px;
 
@@ -225,5 +225,5 @@
 				width: 100%;
 			}
 		}
-	}
+	} */
 </style>

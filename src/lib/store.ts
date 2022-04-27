@@ -11,4 +11,9 @@ export const UserStore = writable(
 	(browser && JSON.parse(localStorage.getItem('UserStore'))) || defaultStore
 );
 
+export const CookieStore = writable(
+	(browser && JSON.parse(localStorage.getItem('CookieStore'))) || { visited: false }
+);
+
 UserStore.subscribe((val) => browser && (localStorage.UserStore = JSON.stringify(val)));
+CookieStore.subscribe((val) => browser && (localStorage.CookieStore = JSON.stringify(val)));
