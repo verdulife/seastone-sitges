@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+		/>
+		<!-- PWA -->
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="theme-color" content="#000" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <!-- PWA -->
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="theme-color" content="#000" />
+		<!-- Web assets -->
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+		<meta name="apple-mobile-web-app-title" content="Seastone Homes" />
+		<link rel="apple-touch-icon" type="image/png" href="/mobile.png" />
+		<link rel="icon" type="image/png" href="/mobile.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Web assets -->
-  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
-  <meta name="apple-mobile-web-app-title" content="Seastone Homes" />
-  <link rel="apple-touch-icon" type="image/png" href="/mobile.png" />
-  <link rel="icon" type="image/png" href="/mobile.png" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<!-- SEO -->
+		<meta name="author" content="Micromina Sitges | info@micromina.com" />
 
-  <!-- SEO -->
-  <meta name="author" content="Micromina Sitges | info@micromina.com" />
+		%svelte.head%
 
-  %svelte.head%
-</head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CKTWKCGLE"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-<body>
-  <div id="svelte">%svelte.body%</div>
-</body>
+			gtag('config', 'G-5CKTWKCGLE');
+		</script>
+	</head>
 
+	<body>
+		<div id="svelte">%svelte.body%</div>
+	</body>
 </html>
