@@ -1,12 +1,12 @@
 const build = [
-  "/_app/start-2e6a3e99.js",
-  "/_app/pages/__layout.svelte-9a78865d.js",
+  "/_app/start-76c70483.js",
+  "/_app/pages/__layout.svelte-87ed7fac.js",
   "/_app/assets/pages/__layout.svelte-217d21a2.css",
-  "/_app/pages/__error.svelte-a43b0287.js",
+  "/_app/pages/__error.svelte-cbfbc776.js",
   "/_app/assets/pages/__error.svelte-aec0e3db.css",
-  "/_app/pages/index.svelte-ad93a3ce.js",
-  "/_app/assets/pages/index.svelte-4867806e.css",
-  "/_app/chunks/vendor-f6e06b0e.js"
+  "/_app/pages/index.svelte-18c3caf1.js",
+  "/_app/assets/pages/index.svelte-fa72c626.css",
+  "/_app/chunks/vendor-bbfad97a.js"
 ];
 const files = [
   "/arrow-left.svg",
@@ -20,6 +20,12 @@ const files = [
   "/gallery/11.jpg",
   "/gallery/12.jpg",
   "/gallery/13.jpg",
+  "/gallery/14.jpg",
+  "/gallery/15.jpg",
+  "/gallery/16.jpg",
+  "/gallery/17.jpg",
+  "/gallery/18.jpg",
+  "/gallery/19.jpg",
   "/gallery/2.jpg",
   "/gallery/3.jpg",
   "/gallery/4.jpg",

@@ -1,26 +1,24 @@
 <script lang="ts">
 	let images = [];
 
-	for (let i = 0; i < 13; i++) {
-		images = [...images, `/gallery/${i + 1}.jpg`];
+	for (let i = 0; i < 19; i++) {
+		images = [...images, `/gallery/${i + 1}.jpg`].sort(() => 0.5 - Math.random());
 	}
 
 	function prevSlider() {
 		const slider = document.querySelector('.slider');
 		const wW = window.innerWidth;
 
-		if (slider.scrollLeft > 0) {
-			slider.scrollLeft -= wW;
-		}
+		if (slider.scrollLeft > 0) slider.scrollLeft -= wW;
+		else slider.scrollLeft = slider.scrollWidth - wW;
 	}
 
 	function nextSlider() {
 		const slider = document.querySelector('.slider');
 		const wW = window.innerWidth;
 
-		if (slider.scrollLeft < slider.scrollWidth - wW) {
-			slider.scrollLeft += wW;
-		}
+		if (slider.scrollLeft < slider.scrollWidth - wW) slider.scrollLeft += wW;
+		else slider.scrollLeft = 0;
 	}
 </script>
 
@@ -83,13 +81,15 @@
 
 		.wave-top {
 			top: -3px;
-			transform: rotateY(180deg);
+			transform: rotateY(180deg) scaleY(0.9);
+			transform-origin: top;
 			filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
 		}
 
 		.wave-bot {
 			bottom: -3px;
-			transform: rotateY(180deg);
+			transform: rotateY(180deg) scaleY(0.3);
+			transform-origin: bottom;
 			filter: drop-shadow(0px -20px 10px rgba(0, 0, 0, 0.3));
 		}
 
