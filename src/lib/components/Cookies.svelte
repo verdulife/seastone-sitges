@@ -5,9 +5,15 @@
 
 {#if browser && !$CookieStore.visited}
 	<div class="cookies box row fcenter">
-		<p>Esta web utiliza cookies para mejorar tu experiencia de navegación.</p>
+		<p>
+			Esta web utiliza cookies para mejorar nuestros servicios y conocer el comportamiento del
+			usuario mediante el análisis de su navegación. Haga clic en ACEPTAR para prestar su
+			consentimiento. También puede obtener más información en nuestra <a
+				href="https://seastone.es/politica-de-cookies/"
+				target="_blank">Política de Cookies</a
+			>.
+		</p>
 		<button class="pri semi" on:click={() => ($CookieStore.visited = true)}>Aceptar</button>
-		<a href="https://seastone.es/politica-privacidad/" target="_blank" class="btn outwhite semi">Más info.</a>
 	</div>
 {/if}
 
@@ -19,7 +25,7 @@
 		right: 0;
 		margin: 0 auto;
 		width: calc(100% - 40px);
-		max-width: 800px;
+		max-width: 1200px;
 		background: rgba($pri, 0.7);
 		backdrop-filter: blur(10px);
 		color: $white;
@@ -30,12 +36,18 @@
 		animation-delay: 1s;
 	}
 
-  p {
-    font-size: 20px;
-  }
+	p {
+		text-align: center;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
 
-	button,
-	a.btn {
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	button {
 		color: $white;
 		font-size: 12px;
 		margin-left: 15px;
@@ -43,13 +55,10 @@
 
 	@media (max-width: $mobile) {
 		p {
-			text-align: center;
 			margin-top: 10px;
-			margin-bottom: 20px;
 		}
 
-		button,
-		a.btn {
+		button {
 			margin: 0 5px;
 		}
 	}
